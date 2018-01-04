@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            Rin is surprised so you don't have to be
+                                                                                                                                                                                                                 
+                                                                                                                               
+                                                                                               
+                   .(((((*..,((((.                                                             
+                *(((*           ,((.                                                           
+  .,*((((((*  ((*                 *(,                                                          
+/((/.     ((  *(.    (             /(                                          *(              
+ (*       *(*  ((                  ,(                           .        ////////(*            
+ *(.       ((  .(/     ,((    (    .(.                          * . ,(////(#######%.           
+  ((       ((   /(. ,(((/          ((                           ((##(////(########%#           
+  ,(/      *(    (((( ((          ((                .. ,  ,..((#########((########%%#  ..      
+   *(  *.  .(/        (*        /(*                     . *#######################%%%.    ,    
+    (,      ((        /(        ,(.             ,         (#######################%*/          
+    /(.     .(         (/     /((((           #%/          ########################/,      .   
+     ((   /  (.        .((((((((*        *%#%%&%&.         .#######################(*          
+      (,     (/            ((   /(,      ,%%%%&/,#          .%%#####################***,..     
+      /(((((((*            (*    ((      *&&&/*.,((*.        .*%%##################%*,,        
+        .((((((            ((/  ((,     ,%&%*,...*,*/..            /%%###%%%%#(##       *      
+        (/    (/             ((((,     ,*%%.......,,**,.            #%#. ,,/.           .      
+        ((    ((                       ,(% ..,...,..,,,**..               .            .       
+         ((//((             ***      , %%, ......#..*,****/   *                      ./,(,     
+                             .   /   /%%........,*..,.. ..,,/*#,.           .    /&%%###(%%##  
+                             *      /%%#....,../ ,.*.    ...,,,,,*.***,.../(////(&%%%%%%%#%(.  
+                            *. ./, ,#%%,....*., .,..     , .,....*..,,..**,,,,,.,&%%%%%%%%##   
+                          .,   //   /*(....,..   ..      ,.*. ,.,.  ... ,...  ,..&&%%%%%%%#(   
+                        /    ////   *.,....,  #(  ,      ,..  ,,.   ...,*...../..&&&%%%%%,     
+                           ., **/   ..*..... / ,#       ...  *(.    ../.,.....(..&&&&%%%*#     
+                           /*  .    .*,..*.,,*  #       *  /(  ##  ,.  *......*,.&&&&&*,&%   
+                            *      ..**,,,(..# (       .   #   *&      ......,.**&&%%%%%#/%    
+                           /*.    ..,,,,*,,,.              #   #/    ,........ *.#&%%%%#,,*    
+                                 ..,*,.****                 ###    ..,.,...(.    (*//*,*,,*    
+                                  *,...*.*,#,       (**     .,,,,.,,,,,,**...,  #****,,.*,,    
+                                 *,,...*,* (**#     ,,,*               ./*#*(/***/*,...,* .    
+                                *.,,...,#*( *****/#%*       .%#*& /*#/*/**/(/****/*....,.*     
+                               *..* ...,,/  ,****//(%&&&&&,/&&&&&&&&//***//*(****%........*,.  
+                               ..*(....*,.  ,****///#&&&&&,#%&&&&&&&*****/(//**/*(........((#/ 
+                               *.,*....,*   ,****////&&&%#*,(&&%%%&&(*****,////(#/........,/#( 
+                               ,/,....../   /,****//#%%%%%///%%%%%%%%****/#////%(.... ...  *(( 
+                                  .,,,,,,   *./**/#%%%%%%%*%%%%%%%%%%%&/////(/(#(......(...*(# 
+                     *(**/**((.     *.,,,*   *. #%%%%&..%&&&&%%%%%%%&%/////#(#.......#..*/(# 
+                 .(,,*////////////**((,./.    *%%%%%&(  (&&&&&&&&@&%%%##%(#%(.,.....#*..((#* 
+             .(,,*///*****///////////////////#&&&&&@@  (&&&&&&&%(&(%%%%%%%%%,,,,,./(/*.#(((. 
+          (,,,****//////*////**///////////(/////////(  &**%&&&&%#&(#&%%%%%%%.,,,,./  ,,*#%(##  
+      (*,*//////////*******////////////////////////(/ ((((///&&%%&&&&&&&&&&&&&&&% /      .//*  
+  (*,,,*////////////////////******////////////////,  (////((%&%(((((((#&&&&&&&&&%%*       */*, 
+***,,,*//*******///////////////*////****////////////////(((.  (((/(((//(((((((#&&%       ,*//  
+////////////*/////*******///////////////////*****////////////((((((((((/((((((/((((((((##*//(  
+///////////////////**/////********//////////////////****////////////((((((((((((((((((/((((((((
+////////////////////*//////**///////****///(///////////////////////////////((((((((((((((((((((
+///*///////////*////////////////////*//////////////((((//////////////////((///((///((((((((((((
+/////*/////**//*///////*///////////////////////((/////////(((((/////////////////((///(((//(((((
+        -->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Steam Cropper</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <script src="./FileSaver.min.js"></script>
+        <script src="./jszip.min.js"></script>
+        <script src="./cropper.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="file-drop-zone">
+            <h2 id="file-drop-center">Drag a file here to use it...</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <small id="not-the-sample-url"><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=748624905" target="_blank">How to upload long screenshots</a></small>
+                </div>
+                <div class="col">
+                    <small id="sample-url">Sample image by <a href="https://www.pixiv.net/member_illust.php?mode=medium&illust_id=65571723" target="_blank">こゆきさん</a></small>
+                </div>
+            </div>
+            <div class="row">
+                <div id="preview-container">
+                    <canvas width="506" height="500" id="left-canvas"></canvas>
+                    <canvas width="100" height="500" id="right-canvas"></canvas>
+                </div>
+                <div id="download-container">
+                    <canvas id="left-dl-canvas"></canvas>
+                    <canvas id="right-dl-canvas"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="input-file" id="select-btn" class="btn btn-primary btn-square">
+                        Choose a file
+                    </label>
+                    <input type="file" id="input-file" accept="image/*">
+                </div>
+                <div class="col" id="ref-urls">
+                    <a href="https://steamcommunity.com/id/TypeA2/" target="_blank" title="My Steam">
+                        <img src="./share_steam_logo.png" alt="Steam">
+                    </a>
+                    <a href="https://github.com/TypeA2" target="_blank" title="My GitHub">
+                        <img src="./GitHub-Mark-32px.png" alt="GitHub">
+                    </a>
+                </div>
+                <div class="col">
+                    <span id="download-btn" class="btn btn-primary btn-square">
+                        Download .zip
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
