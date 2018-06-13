@@ -1,5 +1,10 @@
-#preview-container, .container {
+#preview-container, #preview-container, .container {
     width: 616px;
+    text-align: center;
+}
+
+#preview-container, #url-input {
+    margin-top: 6px;
 }
 
 #default-image, #download-container, #input-file {
@@ -21,9 +26,13 @@ body {
     border-radius: 1px;
 }
 
-.btn-square:hover {
+.btn-square:not(:disabled):hover {
     background-color: royalblue;
     border-color: royalblue;
+}
+
+.btn-square:focus {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 #file-drop-zone {
@@ -43,19 +52,17 @@ body {
     transform: translateY(-50%);
 }
 
-#left-canvas, #right-canvas {
+.mode-artwork .left-canvas, .mode-artwork .right-canvas {
     border: 1px solid #000;
 }
 
-#left-canvas{
+.mode-artwork .left-canvas{
     width: 508px;
-    max-width: 83%;
     float: left;
 }
 
-#right-canvas {
+.mode-artwork .right-canvas {
     float: right;
-    max-width: 17%;
     width: 102px;
 }
 
@@ -79,7 +86,7 @@ a {
     float: left;
 }
 
-#download-btn, #sample-url {
+#mode-dropdown, #sample-url {
     float: right;
 }
 
@@ -94,4 +101,25 @@ a {
 
 #ref-urls a:first-child{
     margin-right:4px;
+}
+
+.dropdown-menu span.dropdown-item {
+    cursor: pointer;
+}
+
+#mode-dropdown .dropdown-menu {
+    border-radius: 1px;
+}
+
+#mode-dropdown.show .dropdown-toggle {
+    background-color: royalblue;
+    border-color: royalblue;
+}
+
+#download-btn-col {
+    text-align: center;
+}
+
+.mode-workshop2 canvas, .mode-workshop4 canvas {
+    margin: 2px;
 }

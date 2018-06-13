@@ -71,12 +71,13 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-        <script src="./FileSaver.min.js"></script>
-        <script src="./jszip.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="./lib/FileSaver.min.js"></script>
+        <script src="./lib/jszip.min.js"></script>
         <script src="./cropper.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
     </head>
     <body>
         <div id="file-drop-zone">
@@ -88,17 +89,12 @@
                     <small id="not-the-sample-url"><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=748624905" target="_blank">How to upload long screenshots</a></small>
                 </div>
                 <div class="col">
-                    <small id="sample-url">Sample image by <a href="https://www.pixiv.net/member_illust.php?mode=medium&illust_id=65571723" target="_blank">こゆきさん</a></small>
+                    <small id="sample-url">Sample image by <a href="https://www.pixiv.net/member_illust.php?mode=medium&illust_id=59033256" target="_blank">清萃</a></small>
                 </div>
             </div>
             <div class="row">
-                <div id="preview-container">
-                    <canvas width="506" height="500" id="left-canvas"></canvas>
-                    <canvas width="100" height="500" id="right-canvas"></canvas>
-                </div>
-                <div id="download-container">
-                    <canvas id="left-dl-canvas"></canvas>
-                    <canvas id="right-dl-canvas"></canvas>
+                <div class="col">
+                    <input id="url-input" type="text" placeholder="https://" value="https://image.ibb.co/mrYOTc/image.png" class="form-control">
                 </div>
             </div>
             <div class="row">
@@ -108,21 +104,42 @@
                     </label>
                     <input type="file" id="input-file" accept="image/*">
                 </div>
-                <div class="col" id="ref-urls">
-                    <a href="https://steamcommunity.com/id/TypeA2/" target="_blank" title="My Steam">
-                        <img src="./share_steam_logo.png" alt="Steam">
-                    </a>
-                    <a href="https://github.com/TypeA2" target="_blank" title="My GitHub">
-                        <img src="./GitHub-Mark-32px.png" alt="GitHub">
-                    </a>
+                <div class="col" id="download-btn-col">
+                    <button disabled type="button" id="download-btn" class="btn btn-primary btn-square">
+                        Download .zip
+                    </button>
                 </div>
                 <div class="col">
-                    <span id="download-btn" class="btn btn-primary btn-square">
-                        Download .zip
-                    </span>
+                    <div class="btn-group dropright" id="mode-dropdown">
+                        <span class="btn btn-primary btn-square dropdown-toggle" data-toggle="dropdown">
+                            Change mode
+                        </span>
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item active" id="mode-artwork" data-target-mode="ARTWORK">Artwork / Screenshot</span>
+                            <span class="dropdown-item" id="mode-workshop-2" data-target-mode="WORKSHOP2">Workshop (2x)</span>
+                            <span class="dropdown-item" id="mode-workshop-4" data-target-mode="WORKSHOP4">Workshop (4x)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="preview-container"></div>
+                <div id="download-container">
+                    <canvas id="left-dl-canvas"></canvas>
+                    <canvas id="right-dl-canvas"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="ref-urls">
+                    <a href="http://steamcommunity.com/profiles/76561198048531323" target="_blank" title="My Steam">
+                        <img src="./img/share_steam_logo.png" alt="Steam">
+                    </a>
+                    <a href="https://github.com/TypeA2" target="_blank" title="My GitHub">
+                        <img src="./img/GitHub-Mark-32px.png" alt="GitHub">
+                    </a>
                 </div>
             </div>
         </div>
-        
     </body>
 </html>
